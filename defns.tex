@@ -30,4 +30,49 @@
   canonical \newline ordering & For all $u,v \in \Sigma^*$, $u < v$ iff $\mid u
   \mid < \mid v \mid$ {\bf or} $\mid u \mid = \mid v \mid$, $u = xs_iu^\prime$
   and $v = xs_{(i+k)}v^\prime$ \\ \hline
+  \multicolumn{2}{>{\itshape}p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+ {A {\bf decision problem} is a triple $(L, U, \Sigma)$ where $\Sigma$ is an
+   alphabet and $L \subseteq U \subseteq \Sigma^*$. An algorithm A {\bf solves
+     (decides)} the decision problem $(L, U, \Sigma)$ if, for every $x \in U$,
+  \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+  \item $A(x) = 1$ if $x \in L$, and
+  \item $A(x) = 0$ if $x \in U - L$ ($x \notin L$)
+  \vspace{-\medskipamount} \end{enumerate}
+  } \\ \hline
+  \multicolumn{2}{>{\itshape}p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+ {An {\bf optimization problem} is a 7-tuple $U = (\Sigma_I, \Sigma_O, L, L_I,
+   \mathcal{M}, cost, goal)$ where
+   \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+   \item $\Sigma_I$ is an alphabet, called the {\bf input alphabet} of $U$
+   \item $\Sigma_O$ is an alphabet, called the {\bf output alphabet} of $U$
+   \item $L \subseteq \Sigma_I^*$ is the {\bf language of feasible problem
+     instances}
+   \item $L_I \subseteq L$ is the {\bf language of the (actual) problem
+     instances of $U$}
+   \item $\mathcal{M}$ is a function from $L$ to $Pot(\Sigma_O^*)$ and, $\forall
+     x \in L$, $\mathcal{M}(x)$ is called the set of {\bf feasible solutions}
+     for $x$
+   \item $cost$ is the {\bf cost function} that, $\forall (u, x)$, where
+     $u \in \mathcal{M}(x)$ for some $x \in L$, assigns a positive real number
+     $cost(u, x)$
+   \item $goal \in \{min, max\}$
+   \vspace{-\medskipamount} \end{enumerate}
+   For every $x \in L_I$, a feasible solution $y \in \mathcal{M}(x)$ is called
+   {\bf optimal for $x$ and $U$} if $cost(y, x) = goal\{cost(z,x) \mid z \in
+   \mathcal{M}(x)\}$. \newline
+   For an optimal solution $y \in \mathcal{M}(x)$, we denote $cost(x,y)$ by
+   $Opt_U(x)$. $U$ is called a {\bf maximization problem} if $goal = max$,
+   and $U$ is a {\bf minimization problem} if $goal = min$. \newline
+   An algorithm A is {\bf consistent} for $U$ if, $\forall x \in L_I$, the
+   output $A(x) \in \mathcal{M}(x)$. We say that an algorithm B {\bf solves} the
+   optimization problem $U$ if
+   \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+   \item $B$ is consistent for $U$
+   \item $\forall x \in L_I$, $B(x)$ is an optimal solution for $x$ and $U$
+   \vspace{-\medskipamount} \end{enumerate}} \\ \hline
+ \multicolumn{2}{>{\itshape}p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+ {Let $U_1 = (\Sigma_I, \Sigma_O, L, L_{I,1}, \mathcal{M}, cost,
+ goal)$, and $ U_1 = (\Sigma_I, \Sigma_O, L, L_{I,2}, \mathcal{M}, cost, goal)$
+ be two optimization problems. We say that $U_1$ is a {\bf subproblem} of $U_2$
+ if $L_{I,1} \subseteq L_{I,2}$.}
 \end{tabu}
