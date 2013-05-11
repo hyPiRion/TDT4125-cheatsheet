@@ -1,13 +1,15 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[left=0cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
-\usepackage{tabularx}
+\usepackage{tabu}
+\tabulinesep=1mm
 
 \pagestyle{empty}
 
 \begin{document}
-\begin{tabularx}{\textwidth}{|X|X|} \hline
+\begin{tabu} to \textwidth{|X[c]|X[c]|} \hline
   \multicolumn{2}{|c|}{\bf Jean Niklas L'orange} \\ \hline
-  a & b \\ \hline
-\end{tabularx}
+  \rowfont\bfseries Formulas & Definitions \\ \hline
+  \input{formulas} & foo \\ \hline
+\end{tabu}
 \end{document}
