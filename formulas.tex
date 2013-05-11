@@ -1,6 +1,6 @@
 \setlength{\tabcolsep}{6pt}
 \vspace{-4.7mm}
-\begin{tabu} to \linewidth {c|X[c,m]}
+\begin{tabu} to \linewidth {X[-2.5,c]|X[c,m]}
   $f(n) = \mathcal{O}(g(n))$ & iff $\exists$ positive $c, n_0$ such that
   $0 \leq f(n) \leq cg(n)$ $\forall n \geq n_0$. \\ \hline
   $f(n) = \Omega(g(n))$ & iff $\exists$ positive $c, n_0$ such that
@@ -11,5 +11,18 @@
   f(n)/g(n) = 0$. \newline \vspace{-0.2\baselineskip} \\ \hline
   $\displaystyle Har(n) = \sum_{i=1}^n \frac1n$ & $\displaystyle Number(u) =
   \sum_{i=1}^n u_i \cdot 2^{i-1}$ \\ \hline
-  $Pot(S) = \{Q \mid Q \subseteq S\}$ & (empty!) \\ \hline
+  $Pot(S) = \{Q \mid Q \subseteq S\}$ & {\bf TODO: put something here} \\ \hline
+  \vspace{-\baselineskip} ~~~~$Time_A(x)$ \newline $Space_A(x)$ &
+  Denotes the time/space complexity of the computation of $A$ on input $x \in
+  \Sigma_I^*$ where $A: \Sigma_I^* \rightarrow \Sigma_O^*$ \\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {{\bf (worst case) complexity of $\mathbf{A}$} is defined by
+    $X_A(n) = max\{X_A(x) \mid x \in \Sigma_I^*\}$ , where $X$ is
+    $Time$/$Space$.} \\ \hline
+  $\mathbf{P}$ & \it $\{L = L(M) \mid M $ is a TM (algorithm) with
+  $Time_M(n) \in \mathcal{O}(n^c), c \in \mathcal{N}^+ \}$ \\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {A language (decision problem) is called {\bf tractable (practically
+      solveable)} if $L \in \mathbf{P}$ and {\bf intractable} if
+    $L \notin \mathbf{P}$.}\\ \hline
 \end{tabu}
