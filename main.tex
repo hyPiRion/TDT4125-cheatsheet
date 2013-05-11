@@ -6,12 +6,14 @@
 \usepackage{tabu}
 \tabulinesep=1mm
 
+\newcommand{\norm}[1]{\textnormal{#1}}
+
 \pagestyle{empty}
 
 \begin{document}
 \begin{tabu} to \textwidth{|X[c]|X[c]|} \hline
   \multicolumn{2}{|c|}{\bf Jean Niklas L'orange} \\ \hline
   \rowfont\bfseries Formulas & Definitions \\ \hline
-  \input{formulas} & foo \\ \hline
+  \input{formulas} & \input{defns} \\ \hline
 \end{tabu}
 \end{document}

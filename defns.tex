@@ -1,0 +1,33 @@
+\begin{tabu} to \linewidth {>{\bfseries}X[-2.5, c, m] | X[l,m]}
+  alphabet \norm{($\Sigma$)} & Any non-empty finite set.\\ \hline
+  symbol {\it of $\Sigma$} & An element of an alphabet.
+  $\Sigma$\\ \hline
+  word {\it over $\Sigma$} & Any finite sequence of symbols of $\Sigma$.
+  \\ \hline
+  $\lambda$ & {\bf the empty word}, $\mid\lambda\mid = 0$. \\ \hline
+  $\mid w \mid$ & {\bf length of a word}, no. of symbols in $w$. \\ \hline
+  $\#_a(w)$ & Number of occurences of $a$ in $w$. \\ \hline
+  $\Sigma^*$ & Set of all words over the alphabet $\Sigma$. \newline
+  $\Sigma^+ = \Sigma^* - \{\lambda\}$ \\ \hline
+  $\Sigma^n$ & All words $w$ over $\Sigma^*$ where $\mid w \mid = n$.
+  \\ \hline
+  $vw$ or $v \cdot w$ & {\bf concatenation} of $v$ and $w$. \\ \hline
+  prefix {\it of} $w$ & Any $v \in \Sigma^*$ s.t. $w = vu$ where $u \in \Sigma^*$.
+  \\ \hline
+  suffix {\it of} $w$ & Any $u \in \Sigma^*$ s.t. $w = vu$ where $v \in \Sigma^*$.
+  \\ \hline
+  subword {\it of} $w$ & Any $z \in \Sigma^*$ s.t. $w = uzv$ where  $v, u \in
+  \Sigma^*$. \\ \hline
+  language \norm{($L$)} & A set $L \subseteq \Sigma^*$ is a language {\it over}
+  $\Sigma^*$. \\ \hline
+  $L^C$ & The {\bf complement of the language $L$ according to $\Sigma$}:
+  $L^C = \Sigma^* - L$. \\ \hline
+  $L_1L_2 = L_1 \circ L_2$ & {\bf concatenation} {\it of $L_1$ and $L_2$}: \newline
+  $L_1L_2 = \{uv \in \left(\Sigma_1 \cup \Sigma_2 \right)^* \mid u \in \Sigma_1,
+  v \in \Sigma_2\}$ \\ \hline
+  linear \newline ordering & if $\Sigma = \{s_1, \ldots, s_m\}$ then
+  $s_1 < \ldots < s_m$ is a linear ordering of $\Sigma$. \\ \hline
+  canonical \newline ordering & For all $u,v \in \Sigma^*$, $u < v$ iff $\mid u
+  \mid < \mid v \mid$ {\bf or} $\mid u \mid = \mid v \mid$, $u = xs_iu^\prime$
+  and $v = xs_{(i+k)}v^\prime$ \\ \hline
+\end{tabu}
