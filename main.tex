@@ -1,18 +1,20 @@
 \documentclass[10pt,a4paper]{article}
-\usepackage[left=0cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[left=2mm,right=12mm,top=1cm,bottom=1cm]{geometry}
 \usepackage{eulervm}
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 
+\setlength{\tabcolsep}{0pt}
 \usepackage{tabu}
 \tabulinesep=1mm
 
 \newcommand{\norm}[1]{\textnormal{#1}}
+\renewcommand{\labelenumi}{(\roman{enumi})}
 
 \pagestyle{empty}
 
 \begin{document}
 \begin{tabu} to \textwidth{|X[c]|X[c]|} \hline
-  \multicolumn{2}{|c|}{\bf Jean Niklas L'orange} \\ \hline
+  \multicolumn{2}{|c|}{\bf ~Jean Niklas L'orange \hfill Algkons v\aa r 2013~~} \\ \hline
   \rowfont\bfseries Formulas & Definitions \\ \hline
   \input{formulas} & \input{defns} \\ \hline
 \end{tabu}

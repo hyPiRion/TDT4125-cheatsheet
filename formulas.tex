@@ -1,11 +1,15 @@
+\setlength{\tabcolsep}{6pt}
+\vspace{-4.7mm}
 \begin{tabu} to \linewidth {c|X[c,m]}
   $f(n) = \mathcal{O}(g(n))$ & iff $\exists$ positive $c, n_0$ such that
   $0 \leq f(n) \leq cg(n)$ $\forall n \geq n_0$. \\ \hline
   $f(n) = \Omega(g(n))$ & iff $\exists$ positive $c, n_0$ such that
   $f(n) \geq cg(n) \geq 0$ $\forall n \geq n_0$. \\ \hline
-  $f(n) = \Theta(g(n))$ & \vspace{0.7\baselineskip} iff $f(n) = O(g(n))$ and
-  $f(n) = \Omega(g(n))$. \newline \vspace{-0.2\baselineskip}
+  $f(n) = \Theta(g(n))$ & iff $f(n) = O(g(n))$ and $f(n) = \Omega(g(n))$.
   \\ \hline
   $f(n) = o(g(n))$ & \vspace{0.7\baselineskip} iff $\lim_{n \to \infty}
   f(n)/g(n) = 0$. \newline \vspace{-0.2\baselineskip} \\ \hline
+  $\displaystyle Har(n) = \sum_{i=1}^n \frac1n$ & $\displaystyle Number(u) =
+  \sum_{i=1}^n u_i \cdot 2^{i-1}$ \\ \hline
+  $Pot(S) = \{Q \mid Q \subseteq S\}$ & (empty!) \\ \hline
 \end{tabu}
