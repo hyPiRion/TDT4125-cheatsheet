@@ -28,11 +28,11 @@
   \onecol
   {\textbf{$\mathbf{M}$ accepts a language $\mathbf{L}$, $\mathbf{L = L(M)}$}
   \textit{if}
-   \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+   \begin{enumeratex}
    \item $\forall x \in L$, $\exists$ at least one computation $M$ that accepts
   $x$
   \item $\forall x \notin L$, all computations of $M$ reject $y$
-   \vspace{-\medskipamount}\end{enumerate}}\\ \hline
+  \end{enumeratex}}\\ \hline
   $\mathbf{VP}$ & $\{V(A) \mid A$ \em is a polynomial-time
   verifier$\}$ \\ \cline{1-1}
   \onecol
@@ -55,22 +55,22 @@
   \onecol
   {{\bf NPO} is the class of optimization problems, where $U = (\Sigma_I, \Sigma_O,
   L, L_I, \mathcal{M}, cost, goal) \in \mathbf{NPO}$ if:
-  \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+  \begin{enumeratex}
   \item $L_I \in \mathbf{P}$
   \item $\exists p_U$ such that $\forall x \in L_I, \forall
   y \in \mathcal{M}(x) \Rightarrow |y| \leq p_U(|x|)$ {\bf and} \\
   $\forall y \in \Sigma_O^*, \forall x \in L_I$ s.t. $|y| \leq p_U(|x|)$ there
   is a polynomial-time algorithm that decides whether $y \in \mathcal{M}(x)$
   \item the function cost is polynomial-time computable
-  \vspace{-\medskipamount}\end{enumerate}}\\ \hline
+  \end{enumeratex}}\\ \hline
   \onecol
   {$\mathbf{PO}$ is the class of optimization problems $U = (\Sigma_I, \Sigma_O,
   L, L_I, \mathcal{M}, cost, goal)$ such that
-  \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+  \begin{enumeratex}
   \item $U \in \mathbf{NPO}$
   \item there is a polynomial-time algorithm that $\forall x \in L_I$ computes
   an optimal solution for $x$.
-  \vspace{-\medskipamount}\end{enumerate}}\\ \hline
+  \end{enumeratex}}\\ \hline
   $\mathbf{Lang_U}$ & The {\bf threshold language of $\mathbf{U}$}, where we
   have\\ \cline{1-1}
   \onecol

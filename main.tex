@@ -11,11 +11,16 @@
 \newcommand{\onecol}{%
   \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}}
 \renewcommand{\labelenumi}{(\roman{enumi})}
+
 \newenvironment{JNPage}%
 {\begin{tabu} to \textwidth{|X[c]|X[c]|} \hline%
   \multicolumn{2}{|c|}{\bf ~Jean Niklas L'orange \hfill Algkons v\aa r 2013~~}%
   \\ \hline}%
 {\end{tabu} \clearpage}
+\newenvironment{enumeratex}{%
+  \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}%
+}{%
+  \vspace{-\medskipamount}\end{enumerate}}
 
 \pagestyle{empty}
 
