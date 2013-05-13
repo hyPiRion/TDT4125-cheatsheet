@@ -3,7 +3,7 @@
 \usepackage{eulervm}
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 
-\setlength{\tabcolsep}{0pt}
+
 \usepackage{tabu}
 \tabulinesep=1mm
 
@@ -13,7 +13,8 @@
 \renewcommand{\labelenumi}{(\roman{enumi})}
 
 \newenvironment{JNPage}%
-{\begin{tabu} to \textwidth{|X[c]|X[c]|} \hline%
+{\setlength{\tabcolsep}{0pt}
+ \begin{tabu} to \textwidth{|X[c]|X[c]|} \hline%
   \multicolumn{2}{|c|}{\bf ~Jean Niklas L'orange \hfill Algkons v\aa r 2013~~}%
   \\ \hline}%
 {\end{tabu} \clearpage}
