@@ -2,15 +2,17 @@
 \begin{tabu} to \linewidth {X[-2.5,c]|X[c,m]}
   $\displaystyle Har(n) = \sum_{i=1}^n \frac1n$ & $\displaystyle Number(u) =
   \sum_{i=1}^n u_i \cdot 2^{i-1}$ \\ \hline
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {Let $U$ be an integer-valued problem, and let $A$ be an algorithm that solves
    $U$. $A$ is a {\bf pseudo-polynomial-time algorithm for $U$} if there exists
    a polynomial $p(a,b)$ s.t. $Time_A(x) = \mathcal{O}(p(|x|,
    Max\text{-}Int(x)))$ for every $x \in U$.} \\ \hline
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {Let $U$ be an integer-valued problem, and let $h : \mathcal{N} \rightarrow
    \mathcal{N}$ be nondecreasing. the {\bf $h$-value-bounded subproblem of $U$,
    $Value(h)-U$}, is the problem obtained from $U$ by restricting the set of all
    input instances of $U$ to the set of input instances $x$ with
    $Max\text{-}Int(x) \leq h(|x|)$.} \\ \hline
+   \bf ~~strongly \newline NP-hard & An integer-valued problem $U$ is {\bf
+  strongly NP-hard} if $\exists$ a poly. $p$ s.t. $Value(p)\text{-}U$ \\ \hline
 \end{tabu}
