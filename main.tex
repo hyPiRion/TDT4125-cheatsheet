@@ -9,13 +9,17 @@
 
 \newcommand{\norm}[1]{\textnormal{#1}}
 \renewcommand{\labelenumi}{(\roman{enumi})}
+\newenvironment{JNPage}%
+{\begin{tabu} to \textwidth{|X[c]|X[c]|} \hline%
+  \multicolumn{2}{|c|}{\bf ~Jean Niklas L'orange \hfill Algkons v\aa r 2013~~}%
+  \\ \hline}%
+{\end{tabu} \clearpage}
 
 \pagestyle{empty}
 
 \begin{document}
-\begin{tabu} to \textwidth{|X[c]|X[c]|} \hline
-  \multicolumn{2}{|c|}{\bf ~Jean Niklas L'orange \hfill Algkons v\aa r 2013~~} \\ \hline
+\begin{JNPage}
   \rowfont\bfseries Time Definitions & Problem Definitions \\ \hline
   \input{formulas} & \input{defns} \\ \hline
-\end{tabu}
+\end{JNPage}
 \end{document}
