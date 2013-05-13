@@ -16,4 +16,49 @@
    \bf ~~strongly \newline NP-hard & An integer-valued problem $U$ is {\bf
   strongly NP-hard} if there exists a polynomial $p$ such that
   $Value(p)\text{-}U$ is NP-hard.\\ \hline
+  \onecol{\centering \bf Parameterized Complexity} \\ \hline
+  \onecol{{\bf A parameterization of $\mathbf{U}$} is any function
+  $\mathbf{Par: L} \rightarrow \mathbb{N}$ s.t.
+  \begin{enumeratex}
+  \item $\mathbf{Par}$ is polynomial-time computable
+  \item for infinitely many $k \in \mathbb{N}$, the
+  {\bf \textit{k}-fixed-parameter set} \newline
+    $\mathbf{Set_U(k)} = \{x \in L \mid Par(x) = k\}$ is an infinite set.
+  \end{enumeratex}} \\ \hline
+  \onecol{$A$ is a {\bf \textit{Par}-parameterized polynomial-time algorithm
+  for \textit{U}} if
+  \begin{enumeratex}
+  \item $A$ solves $U$
+  \item there exists a poly. $p$ and a fn $f : \mathbb{N} \rightarrow
+  \mathbb{N}$ s.t., $\forall x \in L$ \newline
+  $Time_A(x) \leq f(Par(x)) \cdot p(|x|)$
+  \end{enumeratex}}\\ \hline
+  \onecol{$U$ is a {\bf fixed-parameter-tractable according to \textit{Par}},
+  if there is a Par-parameterized polynomial-time algo. for $U$.}\\ \hline
+  \onecol{\centering \bf Local Search} \\ \hline
+  \bf {\footnotesize neighbourhood} \newline on $\M(x)$ &
+  $\forall x \in L_I$, a {\bf neighbourhood on $\M(x)$} is any
+  $f_x : \M(x) \rightarrow Pot(\M(x))$ such that\\ \cline{1-1}
+  \onecol{%
+  \begin{enumeratex}\vspace{-\medskipamount}
+  \item $\alpha \in f_x(\alpha)$ for every $\alpha \in \M$
+  \item if $\beta \in f_x(\alpha)$ for some $\alpha \in \M$, then
+  $\alpha \in f_x(\beta)$
+  \item for all $\alpha, \beta \in \M(x)$, there exists $k \in \N^+$ and
+  $\gamma_1$, .., $\gamma_k \in \M(x)$ s.t. $\gamma_1 \in
+  f_x(\alpha), \gamma_{i+1} \in f_x(\gamma_i)$ for $i = 1,.., k-1$ and
+  $\beta \in f_x(\gamma_k)$
+  \end{enumeratex}
+  If $\alpha \in f_x(\beta)$ for some $\alpha, \beta \in \M(x)$, then $\alpha$
+  and $\beta$ are {\bf neighbours in $\M(x)$}. The set $f_x(\alpha)$ is the {\bf
+  neighbourhood of the feasible solution $\alpha$ in $\M(x)$.} The undirected
+  graph \newline
+  $\mathbf{G}_{\M(x),f_x} = \left(\M(x), \{\{\alpha, \beta\} \mid \alpha \in
+  f_x(\beta), \alpha \neq \beta, \beta \in \M(x)\}\right)$ \newline
+  is the {\bf neighbourhood graph of $\M(x)$ according to the neighbourhood
+  $f_x$}. \vspace{1mm} \newline
+  Let, for every $x \in L_I$, $f_x$ be a neighbourhood on $\M(x)$. The fn
+  $f : \cup_{x\in L_I}(\{x\}\times \M(x)) \rightarrow \cup_{x\in L_I} Pot(\M(x))$
+  with the property $f(x, \alpha) = f_x(\alpha)$ for every $x \in L_I$ and every
+  $\alpha \in \M(x)$ is called a {\bf neighbourhood for \textit{U}}}\\ \hline
 \end{tabu}
