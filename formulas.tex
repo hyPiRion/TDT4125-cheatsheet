@@ -19,12 +19,55 @@
   {{\bf (worst case) complexity of $\mathbf{A}$} is defined by
     $X_A(n) = max\{X_A(x) \mid x \in \Sigma_I^*\}$ , where $X$ is
     $Time$/$Space$.} \\ \hline
+  {\bf TM} & Turing machine \\ \hline
   $\mathbf{P}$ & \it $\{L = L(M) \mid M $ is a TM (algorithm) with
   $Time_M(n) \in \mathcal{O}(n^c), c \in \mathcal{N}^+ \}$ \\ \cline{1-1}
   \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {A language (decision problem) is called {\bf tractable (practically
       solveable)} if $L \in \mathbf{P}$ and {\bf intractable} if
     $L \notin \mathbf{P}$.}\\ \hline
+  {\bf NP} & $\{L(M) \mid M $ \em is a polynomial-time nondeterminstic TM$\}$
+  \\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {\textbf{$\mathbf{M}$ accepts a language $\mathbf{L}$, $\mathbf{L = L(M)}$}
+  \textit{if}
+   \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+   \item $\forall x \in L$, $\exists$ at least one computation $M$ that accepts
+  $x$
+  \item $\forall x \notin L$, all computations of $M$ reject $y$
+   \vspace{-\medskipamount}\end{enumerate}}\\ \hline
+  $\mathbf{VP}$ & $\{V(A) \mid A$ \em is a polynomial-time
+  verifier$\}$ \\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {{\bf $\mathbf{A}$ is a verifier for $\mathbf{L}$, $\mathbf{L = V(A)}$}
+  {\em if $L = \{x \in \Sigma^* \mid A$ accepts $(w,c)$ for some
+  $c\in \{0,1\}^*\}$} (w is problem, c is solution). If $A$ accepts $(w,c)$,
+  then $c$ is a {\bf proof (certificate)} of the fact $w \in L$. A verifier $A$
+  for $L$ is a {\bf polynomial-time verifier} if it runs in polynomial time (See 
+  $\mathbf{P}$).}\\ \hline
+  $L_1 \leq_p L_2$ & $L_1$ is {\bf polynomial-time reducible} to $L_2$, if
+  $A \in \mathbf{P}$ computes a mapping \\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {from $\Sigma_1^*$ to $\Sigma_2^*$ s.t. $\forall x \in \Sigma_1^*$:
+  $x \in L_1 \Longleftrightarrow A(x) \in L_2$. \newline $A$ is the {\bf polynomial-time
+  reduction.}}\\ \hline
+  \bf NP-hard & A language $L$ is {\bf NP-hard} if, for every $U \in \mathbf{NP}$,
+  $U \leq_p L$ \\ \hline
+  \bf NP-complete & A language $L$ is {\bf NP-complete} if $L \in \mathbf{NP}$
+  and $L$ is {\bf NP-hard}\\ \hline
+  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {{\bf NPO} is the class of optimization problems, where $U = (\Sigma_I, \Sigma_O,
+  L, L_I, \mathcal{M}, cost, goal) \in \mathbf{NPO}$ if:
+  \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+  \item $L_I \in \mathbf{P}$
+  \item $\exists p_U$ such that $\forall x \in L_I, \forall
+  y \in \mathcal{M}(x) \Rightarrow |y| \leq p_U(|x|)$ {\bf and} \\
+  $\forall y \in \Sigma_O^*, \forall x \in L_I$ s.t. $|y| \leq p_U(|x|)$ there
+  is a polynomial-time algorithm that decides whether $y \in \mathcal{M}(x)$
+  \item the function cost is polynomial-time computable
+  \vspace{-\medskipamount}\end{enumerate}}\\ \hline
+%  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+%  {foo} \\ \hline
   \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {Let $U$ be an integer-valued problem, and let $A$ be an algorithm that solves
     $U$. $A$ is a {\bf pseudo-polynomial-time algorithm for $U$} if there exists
