@@ -5,12 +5,12 @@
   $\Sigma$\\ \hline
   word {\it over $\Sigma$} & Any finite sequence of symbols of $\Sigma$.
   \\ \hline
-  $\lambda$ & {\bf the empty word}, $\mid\lambda\mid = 0$. \\ \hline
-  $\mid w \mid$ & {\bf length of a word}, no. of symbols in $w$. \\ \hline
+  $\lambda$ & {\bf the empty word}, $|\lambda| = 0$. \\ \hline
+  $| w |$ & {\bf length of a word}, no. of symbols in $w$. \\ \hline
   $\#_a(w)$ & Number of occurences of $a$ in $w$. \\ \hline
   $\Sigma^*$ & Set of all words over the alphabet $\Sigma$. \newline
   $\Sigma^+ = \Sigma^* - \{\lambda\}$ \\ \hline
-  $\Sigma^n$ & All words $w$ over $\Sigma^*$ where $\mid w \mid = n$.
+  $\Sigma^n$ & All words $w$ over $\Sigma^*$ where $| w | = n$.
   \\ \hline
   $vw$ or $v \cdot w$ & {\bf concatenation} of $v$ and $w$. \\ \hline
   prefix {\it of} $w$ & Any $v \in \Sigma^*$ s.t. $w = vu$ where $u \in \Sigma^*$.
@@ -28,8 +28,8 @@
   v \in \Sigma_2\}$ \\ \hline
   linear \newline ordering & if $\Sigma = \{s_1, \ldots, s_m\}$ then
   $s_1 < \ldots < s_m$ is a linear ordering of $\Sigma$. \\ \hline
-  canonical \newline ordering & For all $u,v \in \Sigma^*$, $u < v$ iff $\mid u
-  \mid < \mid v \mid$ {\bf or} $\mid u \mid = \mid v \mid$, $u = xs_iu^\prime$
+  canonical \newline ordering & For all $u,v \in \Sigma^*$, $u < v$ iff $| u
+  | < | v |$ {\bf or} $| u | = | v |$, $u = xs_iu^\prime$
   and $v = xs_{(i+k)}v^\prime$ \\ \hline
   \multicolumn{2}{>{\itshape}p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
  {A {\bf decision problem} is a triple $(L, U, \Sigma)$ where $\Sigma$ is an
