@@ -9,26 +9,23 @@
   \\ \hline
   $f(n) = o(g(n))$ & \vspace{0.7\baselineskip} iff $\displaystyle \lim_{n \to \infty}
   f(n)/g(n) = 0$. \newline \vspace{-0.2\baselineskip} \\ \hline
-  $\displaystyle Har(n) = \sum_{i=1}^n \frac1n$ & $\displaystyle Number(u) =
-  \sum_{i=1}^n u_i \cdot 2^{i-1}$ \\ \hline
-  $Pot(S) = \{Q \mid Q \subseteq S\}$ & {\bf TODO: put something here} \\ \hline
   \vspace{-\baselineskip} ~~~~$Time_A(x)$ \newline $Space_A(x)$ &
   Denotes the time/space complexity of the computation of $A$ on input $x \in
   \Sigma_I^*$ where $A: \Sigma_I^* \rightarrow \Sigma_O^*$ \\ \cline{1-1}
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {{\bf (worst case) complexity of $\mathbf{A}$} is defined by
     $X_A(n) = max\{X_A(x) \mid x \in \Sigma_I^*\}$ , where $X$ is
     $Time$/$Space$.} \\ \hline
   {\bf TM} & Turing machine \\ \hline
   $\mathbf{P}$ & \it $\{L = L(M) \mid M $ is a TM (algorithm) with
   $Time_M(n) \in \mathcal{O}(n^c), c \in \mathcal{N}^+ \}$ \\ \cline{1-1}
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {A language (decision problem) is called {\bf tractable (practically
       solveable)} if $L \in \mathbf{P}$ and {\bf intractable} if
     $L \notin \mathbf{P}$.}\\ \hline
   {\bf NP} & $\{L(M) \mid M $ \em is a polynomial-time nondeterminstic TM$\}$
   \\ \cline{1-1}
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {\textbf{$\mathbf{M}$ accepts a language $\mathbf{L}$, $\mathbf{L = L(M)}$}
   \textit{if}
    \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
@@ -38,7 +35,7 @@
    \vspace{-\medskipamount}\end{enumerate}}\\ \hline
   $\mathbf{VP}$ & $\{V(A) \mid A$ \em is a polynomial-time
   verifier$\}$ \\ \cline{1-1}
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {{\bf $\mathbf{A}$ is a verifier for $\mathbf{L}$, $\mathbf{L = V(A)}$}
   {\em if $L = \{x \in \Sigma^* \mid A$ accepts $(w,c)$ for some
   $c\in \{0,1\}^*\}$} (w is problem, c is solution). If $A$ accepts $(w,c)$,
@@ -47,7 +44,7 @@
   $\mathbf{P}$).}\\ \hline
   $L_1 \leq_p L_2$ & $L_1$ is {\bf polynomial-time reducible} to $L_2$, if
   $A \in \mathbf{P}$ computes a mapping \\ \cline{1-1}
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {from $\Sigma_1^*$ to $\Sigma_2^*$ s.t. $\forall x \in \Sigma_1^*$:
   $x \in L_1 \Longleftrightarrow A(x) \in L_2$. \newline $A$ is the {\bf polynomial-time
   reduction.}}\\ \hline
@@ -55,7 +52,7 @@
   $U \leq_p L$ \\ \hline
   \bf NP-complete & A language $L$ is {\bf NP-complete} if $L \in \mathbf{NP}$
   and $L$ is {\bf NP-hard}\\ \hline
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
   {{\bf NPO} is the class of optimization problems, where $U = (\Sigma_I, \Sigma_O,
   L, L_I, \mathcal{M}, cost, goal) \in \mathbf{NPO}$ if:
   \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
@@ -66,17 +63,7 @@
   is a polynomial-time algorithm that decides whether $y \in \mathcal{M}(x)$
   \item the function cost is polynomial-time computable
   \vspace{-\medskipamount}\end{enumerate}}\\ \hline
-%  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+%  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
 %  {foo} \\ \hline
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
-  {Let $U$ be an integer-valued problem, and let $A$ be an algorithm that solves
-    $U$. $A$ is a {\bf pseudo-polynomial-time algorithm for $U$} if there exists
-    a polynomial $p(a,b)$ s.t. $Time_A(x) = \mathcal{O}(p(|x|,
-    Max\text{-}Int(x)))$ for every $x \in U$.} \\ \hline
-  \multicolumn{2}{p{\dimexpr 1.6\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
-  {Let $U$ be an integer-valued problem, and let $h : \mathcal{N} \rightarrow
-    \mathcal{N}$ be nondecreasing. the {\bf $h$-value-bounded subproblem of $U$,
-  $Value(h)-U$}, is the problem obtained from $U$ by restricting the set of all
-    input instances of $U$ to the set of input instances $x$ with
-    $Max\text{-}Int(x) \leq h(|x|)$.} \\ \hline
+
 \end{tabu}
