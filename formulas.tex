@@ -9,7 +9,7 @@
   \\ \hline
   $f(n) = o(g(n))$ & \vspace{0.7\baselineskip} iff $\displaystyle \lim_{n \to \infty}
   f(n)/g(n) = 0$. \newline \vspace{-0.2\baselineskip} \\ \hline
-  \vspace{-\baselineskip} ~~~~$Time_A(x)$ \newline $Space_A(x)$ &
+  \vspace{-\baselineskip} ~~$Time_A(x)$ \newline $Space_A(x)$ &
   Denotes the time/space complexity of the computation of $A$ on input $x \in
   \Sigma_I^*$ where $A: \Sigma_I^* \rightarrow \Sigma_O^*$ \\ \cline{1-1}
   \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
@@ -40,8 +40,8 @@
   {\em if $L = \{x \in \Sigma^* \mid A$ accepts $(w,c)$ for some
   $c\in \{0,1\}^*\}$} (w is problem, c is solution). If $A$ accepts $(w,c)$,
   then $c$ is a {\bf proof (certificate)} of the fact $w \in L$. A verifier $A$
-  for $L$ is a {\bf polynomial-time verifier} if it runs in polynomial time (See 
-  $\mathbf{P}$).}\\ \hline
+  for $L$ is a {\bf polynomial-time verifier} if A is polynomial-time computable
+  on $w$ (See $\mathbf{P}$).}\\ \hline
   $L_1 \leq_p L_2$ & $L_1$ is {\bf polynomial-time reducible} to $L_2$, if
   $A \in \mathbf{P}$ computes a mapping \\ \cline{1-1}
   \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
@@ -63,7 +63,19 @@
   is a polynomial-time algorithm that decides whether $y \in \mathcal{M}(x)$
   \item the function cost is polynomial-time computable
   \vspace{-\medskipamount}\end{enumerate}}\\ \hline
-%  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
-%  {foo} \\ \hline
-
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {$\mathbf{PO}$ is the class of optimization problems $U = (\Sigma_I, \Sigma_O,
+  L, L_I, \mathcal{M}, cost, goal)$ such that
+  \begin{enumerate} \itemsep1pt \parskip0pt \parsep0pt \vspace{-\medskipamount}
+  \item $U \in \mathbf{NPO}$
+  \item there is a polynomial-time algorithm that $\forall x \in L_I$ computes
+  an optimal solution for $x$.
+  \vspace{-\medskipamount}\end{enumerate}}\\ \hline
+  $\mathbf{Lang_U}$ & The {\bf threshold language of $\mathbf{U}$}, where we
+  have\\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.4\tabucolX+\tabcolsep+\arrayrulewidth\relax}}
+  {$\mathbf{Lang_U} = \{(x,1) \in \L_I\times\Sigma_{bool}^*\mid Opt_U(x) \leq
+  Number(a)\}$ \newline if $goal = minimum$, and as \newline
+  $\mathbf{Lang_U} = \{(x,1) \in \L_I\times\Sigma_{bool}^*\mid Opt_U(x) \geq
+  Number(a)\}$ \newline if $goal = maximum$}\\
 \end{tabu}
