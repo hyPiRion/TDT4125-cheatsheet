@@ -61,4 +61,21 @@
   $f : \cup_{x\in L_I}(\{x\}\times \M(x)) \rightarrow \cup_{x\in L_I} Pot(\M(x))$
   with the property $f(x, \alpha) = f_x(\alpha)$ for every $x \in L_I$ and every
   $\alpha \in \M(x)$ is called a {\bf neighbourhood for \textit{U}}}\\ \hline
+  \onecol{%
+  For an optimization problem $U$, let, for every $x \in L_I$, $f_x$
+  be the neighbourhood on $\M(x)$. A feasible solution $\alpha \in \M(x)$ is a
+  {\bf local optimum for the input instance $x$ of $U$ according to $f_x$} if
+  $cost(\alpha) = goal\{cost(\beta) \mid \beta \in f_x(\alpha)\}$. The set of
+  all local optima for $x$ according to $f_x$ is denoted as $\mathbf{LocOPT_U(x,
+  f_x)}$.} \\ \hline
+  \onecol{%
+  $\mathbf{Neigh_I^k(}\alpha\mathbf{)} = \{\beta \in \M(I) \mid
+  distance_{Neigh_I}(\alpha, \beta) \leq k\}$} \\ \hline
+  \onecol{%
+  $\mathbf{gain(}\alpha\mathbf{,}\beta\mathbf{)} = cost(\alpha) -
+  cost(\beta)$}\\ \hline
+  \onecol{%
+  Let $U$ be an optimization problem, and let $f$ be a neigbourhood for $U$. $f$
+  is called an {\bf exact neighbourhood}, if, for every $x \in L_I$, every
+  local optimum for $x$ according to $f_x$ is an optimal solution to $x$.}
 \end{tabu}
