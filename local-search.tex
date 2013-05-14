@@ -1,0 +1,18 @@
+\setlength{\tabcolsep}{6pt}
+\vspace{-8mm}
+\begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
+  \textbf{polynomial-time \newline searchable} & A neigbourhood $f$, if there is
+  a polynomial-time algorithm that, for every $x \in L_I$ and every $\alpha \in
+  \M(x)$, find one of the best feasible solutions in $f_x(\alpha)$. \\ \hline
+  \textbf{cost-bounded} & $U$, an integer-valued optimization problem, is called
+  {\bf cost-bounded} if, for every input instance $I \in L_I$, $Int(I) =
+  (i_1, i_2, \ldots, i_n), i_j \in \N$ for $j = 1, \ldots, n$,
+  $cost(\alpha) \leq \sum^n_{j=1}i_j$ for every $\alpha \in \M(I)$.
+  \\ \hline
+  \onecol{%
+  Let $U$ be an optimization problem from $\mathbf{NPO}$. We define the
+  {\bf suboptimaly decision problem} to $U$ as the decision problem $(SUBPOPT_U,
+  \Sigma_I \cup \Sigma_O)$ where $\mathbf{SUBOPT_U} = \{(x, \alpha) \in L_I
+  \times \Sigma_O^* \mid \alpha \in \M(x)$ {\em and $\alpha$ is not
+    optimal}$\}$.} \\ \hline
+\end{tabu}
