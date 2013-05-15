@@ -1,18 +1,34 @@
 \setlength{\tabcolsep}{6pt}
 \vspace{-8mm}
 \begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
-  \textbf{polynomial-time \newline searchable} & A neigbourhood $f$, if there is
+  \bf \footnotesize polynomial-time \newline searchable & A neigbourhood $f$, if there is
   a polynomial-time algorithm that, for every $x \in L_I$ and every $\alpha \in
   \M(x)$, find one of the best feasible solutions in $f_x(\alpha)$. \\ \hline
-  \textbf{cost-bounded} & $U$, an integer-valued optimization problem, is called
+  \onecol{%
+  $U$, an integer-valued optimization problem, is called
   {\bf cost-bounded} if, for every input instance $I \in L_I$, $Int(I) =
   (i_1, i_2, \ldots, i_n), i_j \in \N$ for $j = 1, \ldots, n$,
-  $cost(\alpha) \leq \sum^n_{j=1}i_j$ for every $\alpha \in \M(I)$.
-  \\ \hline
+  $cost(\alpha) \leq \sum^n_{j=1}i_j$ for every $\alpha \in \M(I)$.} \\ \hline
   \onecol{%
   Let $U$ be an optimization problem from $\mathbf{NPO}$. We define the
   {\bf suboptimaly decision problem} to $U$ as the decision problem $(SUBPOPT_U,
   \Sigma_I \cup \Sigma_O)$ where $\mathbf{SUBOPT_U} = \{(x, \alpha) \in L_I
   \times \Sigma_O^* \mid \alpha \in \M(x)$ {\em and $\alpha$ is not
     optimal}$\}$.} \\ \hline
+  \onecol{\bf \centering Relaxation to Linear Programming} \\ \hline
+  \bf hyperplane & An affine subspace of $\R^n$ of dimension
+  $n - 1$, $n \in \N^+$. \\ \cline{1-1}
+  \onecol{%
+  alternatively, a hyperplane of $\R^n$ is a set of all $X = (x_1,
+  \ldots, x_n) \in \R^n$ such that $a_1x_1 + \ldots + a_nx_n = b$ for some $a_1,
+  \ldots, a_n, b$ where not all $a$'s are equal to zero.}\\ \hline
+  \bf halfspace & The sets $HS \geq (a_1, \ldots, a_n b)$ $\{X = (x_1, \ldots,
+  x_n) \in \R^n \mid \sum_{i=1}^na_ix_i \geq b\}$ and the set defined as above,
+  but with $\geq$ replaced with $\leq$. \\ \hline
+  \onecol{%
+  The intersection of a finite number of halfspaces of $\R^n$ is a {\bf convex
+    polytope} of $\R^n$, $n \in \N^+$. For given constraints
+  $\sum_{j=1}^na_{ji}x_i \leq b_j$ for $j = 1, \ldots, m$ and $x_i \geq$ for
+  $i = 1, \ldots, n$ $\mathbf{Polytope(AX \leq b, X \geq 0_{n\times1})} = \{X
+    \in (R^{\geq 0}) \mid AX \leq b\}$.} \\ \hline
 \end{tabu}
