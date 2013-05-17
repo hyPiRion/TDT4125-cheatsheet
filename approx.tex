@@ -1,0 +1,13 @@
+\setlength{\tabcolsep}{6pt}
+\begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
+  $\varepsilon\mathbf{_A(x)}$ & Let $U$ be an optimization problem, and let $A$
+  be a consistent algorithm for $U$. For every $x \in L_I$, the {\bf relative
+    error $\varepsilon\mathbf{_A(x)}$ of $A$ on $x$} is defined as \\ \cline{1-1}
+  \onecol{%
+    $\hspace{15mm}\displaystyle\varepsilon_A(x) = \cfrac{|cost(A(x)) -
+      Opt_U(x)|}{Opt_U(x)}$ \vspace{2mm} \newline 
+    For any $n \in \N$, we define {\bf the relative error of \textit{A}}
+    as \vspace{1mm} \newline
+    \phantom{}$\hspace{15mm}\varepsilon_A(n) = \max\{\varepsilon_A(x) \mid x \in L_I \cap
+    (\Sigma_I)^n\}$}
+\end{tabu}
