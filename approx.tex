@@ -1,6 +1,6 @@
 \setlength{\tabcolsep}{6pt}
 \begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
-  $\varepsilon\mathbf{_A(x)}$ & Let $U$ be an optimization problem, and let $A$
+  \bf relative error & Let $U$ be an optimization problem, and let $A$
   be a consistent algorithm for $U$. For every $x \in L_I$, the {\bf relative
     error $\varepsilon\mathbf{_A(x)}$ of $A$ on $x$} is defined as \\ \cline{1-1}
   \onecol{%
@@ -9,5 +9,64 @@
     For any $n \in \N$, we define {\bf the relative error of \textit{A}}
     as \vspace{1mm} \newline
     \phantom{}$\hspace{15mm}\varepsilon_A(n) = \max\{\varepsilon_A(x) \mid x \in L_I \cap
-    (\Sigma_I)^n\}$}
+    (\Sigma_I)^n\}$} \\ \hline
+    $\mathbf{R_A(x)}$ & For every $x \in L_I$, the {\bf approximation ratio
+  $\mathbf{R_A(x)}$ of $\mathbf{A}$ on $\mathbf{x}$} is defined
+  as \\ \cline{1-1}
+  \onecol{%
+  $\displaystyle \hspace{6mm} \mathbf{R_A(x)} =
+  \max\left\{\cfrac{cost(A(x))}{Opt_U(x)}, \cfrac{Opt_U(x)}{cost(A(x))}\right\}
+  = 1 + \varepsilon_A(x)$} \\ \cline{1-1}
+  $\mathbf{R_A(n)}$ & For any $n \in \N$, we define the {\bf approximation ratio
+  of \textit{A}} as $\mathbf{R_A(n)} = \max\{R_A(x) \mid x \in L_I \cap
+  (\Sigma_I)^n\}$ \\ \cline{1-1}
+  \onecol{%
+  For any positive real $\delta > 1$, we say that $A$ is a {\bf
+  $\delta$-approximation algorithm for \textit{U}} if $R_A(x) \leq \delta$ for
+  every $x \in L_I$.} \\
+  \onecol{%
+  For every function $f : \N \to \R^+$ we say that $A$ is an {\bf
+  $\mathbf{f(n)}$-approximation algorithm for \textit{U}} if $R_A(n) \leq f(n)$
+  for every $n \in \N$.} \\ \hline
+  \bf (F)PTAS & Let $U$ be an optimization problem. An algorithm $A$ is called a
+  {\bf polynomial-time approximation scheme (PTAS) for \textit{U}} \\ \cline{1-1}
+  \onecol{if, for every input pair $(x,\varepsilon) \in L_I \times \R^+$, $A$
+  computes a feasible solution $A(x)$ with a relative error at most
+  $\varepsilon$, and $Time_A(x, \varepsilon^{-1})$ can be bounded by a function
+  that is polynomial in $|x|$. If $Time_A(x, \varepsilon^{-1})$ can be bounded
+  by a function that is polynomial in both $|x|$ and $\varepsilon^{-1}$, then we
+  say that $A$ is a {\bf fully polynomial-time approximation scheme (FPTAS)
+  for \textit{U}}.} \\ \hline
+  \bf ~~distance \newline function & Let $U = (\Sigma_I, \Sigma_O, L, L_I, \M,
+  cost, goal)$ and $\bar{U} = (\Sigma_I, \Sigma_O, L, L, \M, cost, goal)$ be
+  two \\ \cline{1-1}
+  \onecol{%
+  optimization problems with $L_I \subset L$ A {\bf distance function for
+  $\mathbf{\bar{U}}$ according to $\mathbf{L_I}$} is any function $h_L :
+  L \to \R^{\geq0}$ satisfying these properties:
+  \begin{enumeratex}
+  \item $h_L(x) = 0$ for every $x \in L_I$
+  \item $h$ is polynomial-time computable
+  \end{enumeratex}} \\ \cline{1-1}
+  $\mathbf{Ball_{r,h}(L_I)}$ & Let $h $ be a distance function for $\bar{U}$
+  according to $L_I$. We define, for any $r \in \R^+$ \phantom{-------}
+  $\mathbf{Ball_{r,h}(L_I)} = \left\{w \in L \mid h(w) \leq r\right\}$.
+  \\ \cline{1-1}
+  \bf p-stable & Let $A$ be a consistent algorithm for $\bar{U}$, and let $A$ be
+  an $\varepsilon$-approximation algorithm for  \\ \cline{1-1}
+  \onecol{%
+  $U$ for some $\varepsilon \in \R^{>1}$. Let $p \in \R^+$. We say that $A$ is
+  {\bf \textit{p}-stable according to \textit{h}} if, for every real $0 < r \leq
+  p$, there exists a $\delta_{r,\varepsilon} \in \R^{>1}$ such that $A$ is a
+  $\delta_{r,\varepsilon}$-approximation algorithm for $U_r =
+  (\Sigma_I, \Sigma_O, L, Ball_{r,h}(L_I), \M, cost, goal)$.} \\
+  \onecol{%
+  $A$ is {\bf stable according to \textit{h}} if $A$ is $p$-stable according to
+  $h$ for every $p \in \R^+$. $A$ is {\bf unstable according to \textit{h}} if
+  $A$ is not p-stable for any $p \in \R^+$.}\\ \cline{1-1}
+  \bf quasistable & For $r \in \N^+$, and every $f_r : \N \to \R^{>1}$
+  we say that $A$ is {\bf $\mathbf{(r, f_r(n))}$-quasistable} \\ \cline{1-1}
+  \onecol{%
+  {\bf according to \textit{h}} if $A$ is an $f_r(n)$-approximation algorithm
+  for $U_r = (\Sigma_I, \Sigma_O, L, Ball_{r,h}(L_I), \M, cost, goal)$.}
 \end{tabu}
