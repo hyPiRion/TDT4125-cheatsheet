@@ -1,0 +1,38 @@
+\setlength{\tabcolsep}{6pt}
+\vspace{-10mm}
+\begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
+  \multicolumn{2}{p{\dimexpr 0.97\linewidth-\tabcolsep-\arrayrulewidth\relax}}{%
+    What follows are five subclasses of the class NPO.
+    \renewcommand{\labelenumi}{\bf NPO(\Roman{enumi})}
+    \begin{enumeratex} \addtolength{\itemindent}{9mm}
+    \item Contains every optimization problem from NPO for which there exists a
+      FPTAS. \newline Example: Knapsack problem.
+    \item Contains every optimization problem from NPO that has a PTAS.
+      \newline Example: Makespan scheduling problem.
+    \item Contains every optimization problem $U \in NPO$ such that
+      \begin{enumeratex}
+      \item there is a polynomial-time $\delta$-approximation algorithm for some
+        $\delta > 1$, and
+      \item there is no polynomial-time $d$-approximation algorithm for $U$ for
+        some $d < \delta$ (possibly under some reasonable assumption like $P
+        \neq NP$), i.e. there is no PTAS for $U$.
+      \end{enumeratex}
+      Examples: Min. vertex cover prob, {\sc Max-Sat}, {\sc $\Delta$-TSP}
+    \item Contains every $U \in NPO$ such that
+      \begin{enumeratex}
+      \item there is a polynomial-time $f(n)$-approximation algorithm for $U$
+        for some $f : \N \to \R^+$, where $f$ is bounded by a polylogarithmic
+        function, and
+      \item under some reasonable assumption like $P \neq NP$, there does not
+        exist any polynomial-time $\delta$-approximation algorithm for $U$ for
+        any $\delta \in \R^+$.
+      \end{enumeratex}
+      \vspace{-3mm} Examples: Set cover problem
+    \item Contains every $U \in NPO$ such that if ther exists a polynomial-time
+      $f(n)$-approximation algorithm for $U$, then (under some reasonable
+      assumption like $P \neq NP$) $f(n)$ is not bounded by any polylogarithmic
+      function.
+      \newline Examples: TSP, maximum clique problem
+    \end{enumeratex}
+    \renewcommand{\labelenumi}{(\roman{enumi})}} \\ \hline
+\end{tabu}
