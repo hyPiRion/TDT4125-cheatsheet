@@ -1,0 +1,12 @@
+\setlength{\tabcolsep}{6pt}
+\begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
+  $\mathbf{LSS(Neigh)}$ & Local search scheme in the neighbourhood $Neigh$,
+  always picking the best neighbour. \\ \hline
+  \bf multistart \newline local search & $LSS(Neigh)$ with multiple random
+  initial starting points. \\ \hline
+  \bf threshold \newline local search & $LSS$ but allows to move to a weaker
+  solution than the current when the deteriotation is not above a given
+  threshold. \\ \hline
+  \bf simulated \newline annealing & As $LSS$, but with a random pick and a
+  probability of picking a worse solution, based on a temperature $T$. \\ \hline
+\end{tabu}
