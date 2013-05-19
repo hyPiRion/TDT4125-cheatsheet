@@ -35,4 +35,23 @@
       \newline Examples: TSP, maximum clique problem
     \end{enumeratex}
     \renewcommand{\labelenumi}{(\roman{enumi})}} \\ \hline
+  \multicolumn{2}{c}{%
+    \bf Approximation Algorithms (cont.)} \\ \hline
+  \bf superstable & Let $U = (\Sigma_I, \Sigma_O, L, L_I, \M, cost, goal)$ and
+  $\bar{U} = (\Sigma_I, \Sigma_O, L, L, \M, cost, goal)$ be two \\ \cline{1-1}
+  \multicolumn{2}{p{\dimexpr 1.32\tabucolX+\tabcolsep+\arrayrulewidth\relax}}{%
+    optimization problems with $L_I \subset L$. Let $h$ be a distance function
+    for $\bar{U}$ according to $L_I$, and let $U_r = (\Sigma_I, \Sigma_O, L,
+    Ball_{r,h}(L_I), \M, cost, goal)$ for every $r \in \R^+$. Let $A =
+    \{A_\varepsilon\}_{\varepsilon > 0}$ be a PTAS for $U$. \newline
+    If, for every $r > 0$ and every $\varepsilon > 0$, $A_\varepsilon$ is a
+    $\delta_{r,\varepsilon}$-approximation algorithm for $U_r$, we say that the
+    PTAS $A$ is {\bf stable according to \textit{h}}. \newline
+    If $\delta_{r, \varepsilon} \leq f(\varepsilon) \cdot g(r)$, where
+    \begin{enumeratex}
+    \item $f$ and $g$ are some functions from $\R^{\geq 0}$ to $\R^+$ and
+    \item $\lim_{\varepsilon\to0} f(\varepsilon) = 0$
+    \end{enumeratex}
+    we say that the PTAS $A$ is {\bf superstable according to \textit{h}.}}
+  \\ \hline
 \end{tabu}
