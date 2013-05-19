@@ -43,7 +43,7 @@
     optimization problems with $L_I \subset L$. Let $h$ be a distance function
     for $\bar{U}$ according to $L_I$, and let $U_r = (\Sigma_I, \Sigma_O, L,
     Ball_{r,h}(L_I), \M, cost, goal)$ for every $r \in \R^+$. Let $A =
-    \{A_\varepsilon\}_{\varepsilon > 0}$ be a PTAS for $U$. \newline
+    \{A_\varepsilon\}_{\varepsilon > 0}$ be a PTAS for $U$.
     If, for every $r > 0$ and every $\varepsilon > 0$, $A_\varepsilon$ is a
     $\delta_{r,\varepsilon}$-approximation algorithm for $U_r$, we say that the
     PTAS $A$ is {\bf stable according to \textit{h}}. \newline
@@ -54,4 +54,32 @@
     \end{enumeratex}
     we say that the PTAS $A$ is {\bf superstable according to \textit{h}.}}
   \\ \hline
+  \multicolumn{2}{p{\dimexpr 1.32\tabucolX+\tabcolsep+\arrayrulewidth\relax}}{%
+    Let $U$ be an optimization problem. A {\bf constraint distance function} for
+    $U$ is any function $h : L_I \times \Sigma^*_O \to \R^{\geq 0}$ such that
+    \begin{enumeratex}
+    \item $h(x, S) = 0$ for every $S \in \M(x)$,
+    \item $h(x, S) > 0$ for every $S \notin \M(x)$, and
+    \item $h$ is polynomial-time computable
+    \end{enumeratex}
+    For every $\varepsilon \in \R^+$ and every $x \in L_I$,
+    $\mathbf{\M^h_\varepsilon(x)} = \left\{S \in \Sigma_O^* \mid h(x, S) \leq
+    \varepsilon\right\}$ is the {\bf $\varepsilon$-ball of $\M(\mathbf{x})$
+      according to \textit{h}}} \\ \hline
+  \multicolumn{2}{p{\dimexpr 1.32\tabucolX+\tabcolsep+\arrayrulewidth\relax}}{%
+    Let $U$ be an optimization problem, nad let $h$ be a constraint distance
+    function for $U$. An algorithm $A$ is called {\bf \textit{h}-dual
+      polynomial-time approximation scheme (\textit{h}-dual PTAS for
+      \textit{U})}, if
+    \begin{enumeratex}
+    \item for every input $(x, \varepsilon) \in L_I \times \R^+,
+      A(x,\varepsilon) \in \M^h_\varepsilon(x)$
+    \item $cost(A(x,\varepsilon)) \geq Opt_U(x)$ if $goal = \min$ ($\leq$ for
+      $\max$)
+    \item $Time_A(x, \varepsilon^{-1})$ is bounded by a fn polynomial in $|x|$
+    \end{enumeratex}
+    If $Time_A(x, \varepsilon^{-1})$ can be bounded by a fn polynomial in both
+    $|x|$ and $\varepsilon^{-1}$, we say that $A$ is a {\bf \textit{h}-dual
+      fully polynomial-time approximation scheme (\textit{h}-dual FPTAS) for
+      \textit{U}}}
 \end{tabu}
