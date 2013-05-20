@@ -9,4 +9,31 @@
   threshold. \\ \hline
   \bf simulated \newline annealing & As $LSS$, but with a random pick and a
   probability of picking a worse solution, based on a temperature $T$. \\ \hline
+  \onecolx{1.33}{%
+    Let $U$ be an optimization problem. Let, for a given instance $x \in L_I$ of
+    size $n$, every $\alpha \in \left\{0,1\right\}^n$ represent a feasible
+    solution to $x$ (i.e. $\M(x) = \left\{0,1\right\}^n$). A {\bf schema for
+      $\M(x)$} is any vector $s = (s_1, s_2, \ldots, s_n) \in
+    \left\{0,1,*\right\}^n$. A {\bf set of feasible solutions of a schema}
+      $\mathbf{s = (s_1, s_2, \ldots, s_n)}$ is {\em
+    $\mathbf{Schema(s_1, s_2, \ldots, s_n)} = \{\gamma_1, \gamma_2, \ldots
+    \gamma_n \in \M(x) \mid \gamma_i = s_i$ for all $i \in \{1, \ldots, n\}$ such
+    that $s_i \in \{0, 1\}$ for all $j \in \{1, \ldots, n\}$ such that
+    $s_i = *\}$} \vspace{1mm}\newline
+    The {\bf length of a schema \textit{s}}, denoted $\mathbf{length(s)}$, is
+    the distance between the first and the last non-$*$ position in $s$. The
+    {\bf order of a schema \textit{s}}, denoted $\mathbf{order(s)}$, is the
+    number of non-$*$ positions. The {\bf fitness of a schema $\mathbf{s = (s_1,
+        s_2, \ldots, s_n)}$ in a population \textit{P}} is the average fitness
+    of feasible solutions in $Schema(s)$, i.e. \newline
+    $\displaystyle\mathbf{Fitness(s, P)} = \cfrac{1}{|Schema(s) \cap P|} \cdot
+    \sum_{\gamma \in Schema(s) \cap P} cost(\gamma)$ \vspace{1mm}\newline
+    The {\bf fitness ratio of a schema \textit{s} in a population \textit{P}}
+    is \vspace{1mm}\newline
+    \phantom{------------------}
+    $\displaystyle\mathbf{Fit\text{-}ratio(s, P)} =
+    \frac{Fitness(s,P)}{\frac{1}{|P|}\sum_{\beta\in P} cost \beta}$
+    \vspace{1mm}\newline
+    $\mathbf{Aver\text{-}Fit(P)} = \frac{1}{|P|}\sum_{\beta\in P}cost(\beta)$ is
+    called the {\bf average fitness of the population \textit{P}}.} \\ \hline
 \end{tabu}
