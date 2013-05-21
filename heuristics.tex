@@ -1,39 +1,37 @@
 \setlength{\tabcolsep}{6pt}
 \begin{tabu} to \linewidth {X[-2.5, c, m] | X[l,m]}
-  $\mathbf{LSS(Neigh)}$ & Local search scheme in the neighbourhood $Neigh$,
-  always picking the best neighbour. \\ \hline
-  \bf multistart \newline local search & $LSS(Neigh)$ with multiple random
-  initial starting points. \\ \hline
-  \bf threshold \newline local search & $LSS$ but allows to move to a weaker
-  solution than the current when the deteriotation is not above a given
-  threshold. \\ \hline
-  \bf simulated \newline annealing & As $LSS$, but with a random pick and a
-  probability of picking a worse solution, based on a temperature $T$. \\ \hline
+  \bf standard \newline (inequality) \newline form & defn \\ \hline
+  \bf canonical \newline form & defn \\ \hline
+  \bf standard \newline inequality \newline form & defn \\ \hline
+  \bf general \newline form & defn \\ \hline
+  \bf hyperplane & An affine subspace of $\R^n$ of dimension
+  $n - 1$, $n \in \N^+$. \\ \cline{1-1}
   \onecolx{1.33}{%
-    Let $U$ be an optimization problem. Let, for a given instance $x \in L_I$ of
-    size $n$, every $\alpha \in \left\{0,1\right\}^n$ represent a feasible
-    solution to $x$ (i.e. $\M(x) = \left\{0,1\right\}^n$). A {\bf schema for
-      $\M(x)$} is any vector $s = (s_1, s_2, \ldots, s_n) \in
-    \left\{0,1,*\right\}^n$. A {\bf set of feasible solutions of a schema}
-      $\mathbf{s = (s_1, s_2, \ldots, s_n)}$ is {\em
-    $\mathbf{Schema(s_1, s_2, \ldots, s_n)} = \{\gamma_1, \gamma_2, \ldots
-    \gamma_n \in \M(x) \mid \gamma_i = s_i$ for all $i \in \{1, \ldots, n\}$ such
-    that $s_i \in \{0, 1\}$ for all $j \in \{1, \ldots, n\}$ such that
-    $s_i = *\}$} \vspace{1mm}\newline
-    The {\bf length of a schema \textit{s}}, denoted $\mathbf{length(s)}$, is
-    the distance between the first and the last non-$*$ position in $s$. The
-    {\bf order of a schema \textit{s}}, denoted $\mathbf{order(s)}$, is the
-    number of non-$*$ positions. The {\bf fitness of a schema $\mathbf{s = (s_1,
-        s_2, \ldots, s_n)}$ in a population \textit{P}} is the average fitness
-    of feasible solutions in $Schema(s)$, i.e. \newline
-    $\displaystyle\mathbf{Fitness(s, P)} = \cfrac{1}{|Schema(s) \cap P|} \cdot
-    \sum_{\gamma \in Schema(s) \cap P} cost(\gamma)$ \vspace{1mm}\newline
-    The {\bf fitness ratio of a schema \textit{s} in a population \textit{P}}
-    is \vspace{1mm}\newline
-    \phantom{------------------}
-    $\displaystyle\mathbf{Fit\text{-}ratio(s, P)} =
-    \frac{Fitness(s,P)}{\frac{1}{|P|}\sum_{\beta\in P} cost \beta}$
-    \vspace{1mm}\newline
-    $\mathbf{Aver\text{-}Fit(P)} = \frac{1}{|P|}\sum_{\beta\in P}cost(\beta)$ is
-    called the {\bf average fitness of the population \textit{P}}.} \\ \hline
+  alternatively, a hyperplane of $\R^n$ is a set of all $X = (x_1,
+  \ldots, x_n) \in \R^n$ such that $a_1x_1 + \ldots + a_nx_n = b$ for some $a_1,
+  \ldots, a_n, b$ where not all $a$'s are equal to zero.}\\ \hline
+  \bf halfspace & The sets $HS \geq (a_1, \ldots, a_n b)$ $\{X = (x_1, \ldots,
+  x_n) \in \R^n \mid \sum_{i=1}^na_ix_i \geq b\}$ and the set defined as above,
+  but with $\geq$ replaced with $\leq$. \\ \hline
+  \onecolx{1.33}{%
+  The intersection of a finite number of halfspaces of $\R^n$ is a {\bf convex
+    polytope} of $\R^n$, $n \in \N^+$. For given constraints
+  $\sum_{j=1}^na_{ji}x_i \leq b_j$ for $j = 1, \ldots, m$ and $x_i \geq$ for
+  $i = 1, \ldots, n$ $\mathbf{Polytope(AX \leq b, X \geq 0_{n\times1})} = \{X
+    \in (R^{\geq 0}) \mid AX \leq b\}$.} \\ \hline
+  \onecolx{1.33}{%
+  Let $d, n \in \N^+$, and $A$ be a convex polytope of dimension $d$ in $\R^n$.
+  Let $H$ be a hyperplane of $\R^n$ and let $HS$ be a halfspace defined by $H$.
+  If $A \cap HS \subseteq H$ (i.e. $A$ and $HS$ just ``touch in their
+  exteriors''), then $A \cap HS$ is called a {\bf face of \textit{A}}, and $H$
+  is called the {\bf supporting hyperplane defining $\mathbf{A \cap HS}$}.}
+  \\ \hline
+  \onecolx{1.33}{%
+  We distinguish the following three kinds of faces:
+  \begin{enumeratex}
+  \item A {\bf facet of \textit{A}} is a face of dimension $n - 1$
+  \item An {\bf edge of \textit{A}} is a face of dimension $1$ (i.e. a line
+  segment)
+  \item A {\bf vertex of \textit{A}} is a face of dimension $0$ (i.e. a point)
+  \end{enumeratex}} \\ \hline
 \end{tabu}
