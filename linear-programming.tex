@@ -9,13 +9,23 @@
   under the constraints \\ \cline{1-1}
   \onecolx{1.33}{%
   $\displaystyle \sum_{i=1}^n a_{ji}x_i \geq b_j$ for $j = 1, \ldots, m$, and
-  $x_i \geq 0$ for $i = 1, \ldots, n$} \\ \hline
+  $x_i \geq 0$ for $i = 1, \ldots, n$ \vspace{1mm} \newline
+  to move to standard form, add a new variable $s_j$ ({\bf surplus} variable)
+  for every inequality constraint and instead require: \newline
+  \phantom{------------}
+  $\displaystyle \sum_{i=1}^n a_{ji}x_i - s_j = b_j$, $s_j \geq 0$
+  for $j = 1, \ldots, m$} \\ \hline
   \bf standard \newline inequality \newline form &
     minimize $\displaystyle \sum_{i=1}^n c_ix_i$ under the
   constraints \\ \cline{1-1}
   \onecolx{1.33}{%
   $\displaystyle \sum_{i=1}^n a_{ji}x_i \leq b_j$ for $j = 1, \ldots, m$, and
-  $x_i \geq 0$ for $i = 1, \ldots, n$}\\ \hline
+  $x_i \geq 0$ for $i = 1, \ldots, n$ \newline
+  to move to standard form, add a new variable $s_j$ ({\bf slack} variable) for
+  every inequality constraint and require: \newline
+  \phantom{------------}
+  $\displaystyle \sum_{i=1}^n a_{ji}x_i + s_j = b_j$, $s_j \geq 0$
+  for $j = 1, \ldots, m$}\\ \hline
   \bf general \newline form &
   minimize $\displaystyle \sum_{i=1}^n c_ix_i$ for an input instance \\ \cline{1-1}
   \onecolx{1.33}{%
