@@ -1,6 +1,7 @@
 # TDT4125 - Cheatsheet
 
-A cheatsheet for hard problems in algorithmics.
+A cheatsheet for hard problems in algorithmics. The latest version can be
+downloaded [here](https://github.com/hyPiRion/TDT4125-cheatsheet/releases/download/1.0.0/cheatsheet-1.0.0.pdf).
 
 ## License
 
